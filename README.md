@@ -1,25 +1,25 @@
-# 🐟 Oceanarium Manager (Hibernate + Swing)
+# 🐟 Oceanarium Manager
 
-Projekt wykonany w ramach laboratorium z przedmiotu **Programowanie Obiektowe / Technologie Java**.
+Projekt wykonany w ramach laboratorium z przedmiotu **PROJEKTOWANIE APLIKACJI UŻYTKOWYCH**.
 
-Aplikacja desktopowa umożliwiająca zarządzanie oceanarium — akwariami, rybami oraz ocenami — z wykorzystaniem **Hibernate ORM**, **bazy danych H2** oraz interfejsu graficznego w **Swing**.
+Aplikacja desktopowa umożliwiająca zarządzanie akwariami, rybami oraz ich ocenami. Działa z wykorzystaniem **Hibernate ORM**, **bazy danych H2** oraz interfejsu graficznego w **Swing**.
 
 ---
 
-## 📌 Funkcjonalności
+## Funkcjonalności
 
-### 🐠 Zarządzanie akwariami
+### Zarządzanie akwariami
 - dodawanie i usuwanie akwariów
 - wyświetlanie listy akwariów
 - sortowanie według zapełnienia
 
-### 🐟 Zarządzanie rybami
+### Zarządzanie rybami
 - dodawanie i usuwanie ryb
 - zmiana stanu ryby (zdrowa, chora, kwarantanna itp.)
 - filtrowanie po nazwie / gatunku
 - filtrowanie po stanie
 
-### ⭐ System ocen (Rating)
+### System ocen (Rating)
 - dodawanie ocen (0–5)
 - przypisanie oceny do akwarium
 - komentarz + data
@@ -27,18 +27,18 @@ Aplikacja desktopowa umożliwiająca zarządzanie oceanarium — akwariami, ryba
   - liczby ocen
   - średniej ocen dla akwarium
 
-### 📊 Statystyki
+### Statystyki
 - wykorzystanie **Criteria API**
 - grupowanie (GROUP BY)
 - wyświetlanie statystyk w UI
 
-### 💾 Zapis i odczyt danych
+### Zapis i odczyt danych
 - zapis/odczyt do pliku binarnego (serializacja)
 - eksport/import danych do CSV
 
 ---
 
-## 🧱 Technologie
+## Technologie
 
 - Java 17
 - Hibernate ORM
@@ -51,7 +51,7 @@ Aplikacja desktopowa umożliwiająca zarządzanie oceanarium — akwariami, ryba
 
 ---
 
-## 🗂️ Struktura projektu
+## Struktura projektu
 ├── model # encje (Aquarium, Fish, Rating)
 ├── dao # dostęp do bazy danych (DAO)
 ├── service # logika biznesowa (statystyki, pliki)
@@ -62,28 +62,3 @@ Aplikacja desktopowa umożliwiająca zarządzanie oceanarium — akwariami, ryba
 
 ---
 
-## 🧩 Relacje w bazie danych
-
-- `Aquarium` 1 → N `Fish`
-- `Aquarium` 1 → N `Rating`
-
----
-
-Projekt wykorzystuje bazę:
-
-H2 (lokalna / w pamięci)
-
-Konfiguracja znajduje się w:
-
-hibernate.cfg.xml
-
-
-
-🎯 Cel projektu
-
-Celem projektu było:
-
-poznanie Hibernate ORM
-praca z relacyjną bazą danych w Javie
-refaktoryzacja aplikacji z pamięci na bazę danych
-implementacja warstwowej architektury aplikacji
